@@ -121,7 +121,7 @@ This means that if you are using source maps for minimized code, you need to set
 ``` diff
   devtool: "source-map",
   plugins: [
-    new UglifyJsPlugin({
+    new webpack.optimize.UglifyJsPlugin({
 +     sourceMap: true
     })
   ]
@@ -200,7 +200,7 @@ Best refactor this code as it won't work with ES2015 Modules. If this is not pos
 
 ### Using custom arguments in CLI and configuration
 
-If you abused the CLI to pass custom arguments to the configuration like so:
+If you used the CLI to pass custom arguments to the configuration like so:
 
 `webpack --custom-stuff`
 
